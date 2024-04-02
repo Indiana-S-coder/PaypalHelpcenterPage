@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* 
+X-Mark = <FontAwesomeIcon icon="fa-solid fa-xmark" />
+important = <FontAwesomeIcon icon="fa-solid fa-circle-exclamation" />
+handshake = <FontAwesomeIcon icon="fa-solid fa-handshake" />
+community = <FontAwesomeIcon icon="fa-solid fa-user-group" />
+contact = <FontAwesomeIcon icon="fa-solid fa-circle-question" />
+search = <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
+
+
+*/
