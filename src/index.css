@@ -16,5 +16,10 @@ search = <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
 
 * {
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    
 }
