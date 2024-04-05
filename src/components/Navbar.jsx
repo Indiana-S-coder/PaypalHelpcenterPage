@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
       <>
         <nav className="flex justify-center px-4 py-4 items-center md:px-14 lg:px-40">  
-            <div className="flex w-full justify-between items-center">
+            <div className=" flex w-full justify-between items-center">
               {/* menu */}
               <div onClick={() => setOpen(!open)} className='flex items-center justify-between gap-4 md:hidden'>
                 <button className='border-blue-700 items-center border-[2px] rounded-full px-3.5 py-1 flex gap-2 '>
@@ -44,26 +44,34 @@ const Navbar = () => {
 
              {/* logo */}
 
-              <div className='flex items-center justify-center gap-6 '>
+              <div className='flex items-center justify-center gap-x-6 '>
                 <div className='lg:pr-8'>
                   <Link to="/" className="">
                     <img src="/paypal.svg" alt="" className='w-[1.5rem]'/>
                   </Link>
                 </div>
-                <div className="hidden md:block ">
-                  <ul className={`flex items-center md:gap-2 lg:gap-4`}>
+
+                <div className={` ${open ? 'absolute left-0 top-20 text-gray-100 w-[70%] h-screen z-[2] bg-blue-900 transition-all duration-500 ease-in':'hidden'} md:flex md:items-center md:text-gray-800 md:bg-white`}>
+                  <ul className={`absolute text-left px-8 w-full py-5 text-2xl md:flex md:text-center md:text-sm md:py-0 md:items-center md:gap-x-2 lg:gap-x-4`}>
                     {navLinks.map((data, index) => (
                       <li key={index}>
                         <a
                           href={data.link}
-                          className="overflow-x-hidden inline-block px-3 md:px-2 lg:px-4 font-semibold text-gray-700 hover:text-black dark:hover:text-white duration-200"
+                          className=" overflow-x-hidden inline-block px-3 py-3 md:py-0 md:px-2 lg:px-4 font-semibold hover:bg-white hover:text-black cursor-pointer duration-200 after:text-black"
                           >
                           {" "}
                           {data.label}
                         </a>
                       </li>
                     ))}
+                    <hr className='h-[1px] bg-gray-100 md:hidden'/>
                   </ul>
+                  
+                  <div className='absolute border-t-gray-100 border-t-[1px] w-full bottom-24 py-6 left-[30] md:hidden'>
+                    <button className=' bg-blue-900 border-white border-2 text-white py-2 px-6 rounded-full font-medium text-2xl'>
+                      Log in
+                    </button> 
+                  </div>
                 </div>
               </div>
 
@@ -83,28 +91,6 @@ const Navbar = () => {
               </button> 
             </div>
           </div>
-
-          {/* sidebar mobile menu */}
-           {/* <div
-            className={`
-            "fixed h-full lg:hidden bg-black/50 backdrop-blur-sm top-0 right-0 -translate-x-full transition-all ",
-            ${open && "translate-x-0"}`
-          }
-          >
-            <section className=" bg-blue-900 flex-col text-gray-100 absolute left-0 top-0 h-screen p-8 gap-8 z-50 w-56 flex  ">
-               <FontAwesomeIcon
-                icon = {faXmark}
-                onClick={() => setOpen(!open)}
-                className="mt-0 mb-8 cursor-pointer"
-                /> 
-
-              {navLinks.map((d, i) => (
-                <Link key={i} className="font-normal" href={d.link}>
-                  {d.label}
-                </Link>
-              ))}
-            </section> 
-              </div>   */}
 
       </nav> 
       <hr className='bg-slate-300 h-[1px]' />
