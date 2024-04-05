@@ -52,7 +52,7 @@ const Navbar = () => {
                 </div>
 
                 <div className={` ${open ? 'absolute left-0 top-20 text-gray-100 w-[70%] h-screen z-[2] bg-blue-900 transition-all duration-500 ease-in':'hidden'} md:flex md:items-center md:text-gray-800 md:bg-white`}>
-                  <ul className={`absolute text-left px-8 w-full py-5 text-2xl md:flex md:text-center md:text-sm md:py-0 md:items-center md:gap-x-2 lg:gap-x-4`}>
+                  <ul className={`absolute text-left px-8 py-5 text-2xl md:flex md:text-center md:text-sm md:py-0 md:items-center md:gap-x-2 lg:gap-x-4`}>
                     {navLinks.map((data, index) => (
                       <li key={index}>
                         <a
@@ -64,7 +64,6 @@ const Navbar = () => {
                         </a>
                       </li>
                     ))}
-                    <hr className='h-[1px] bg-gray-100 md:hidden'/>
                   </ul>
                   
                   <div className='absolute border-t-gray-100 border-t-[1px] w-full bottom-24 py-6 left-[30] md:hidden'>

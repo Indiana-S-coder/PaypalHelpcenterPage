@@ -14,7 +14,7 @@ function App() {
   
   return (
     <BrowserRouter>
-      <div className='flex flex-col justify-center'>
+      <div className='flex w-full flex-col justify-center'>
         <Navbar/>
         <div className='flex flex-col items-center lg:max-w-1280px'>
           <Header/>
