@@ -21,7 +21,7 @@ const HelpSection = () => {
         </div>
 
 
-        <div className='flex py-10 md:flex-row gap-10 flex-col items-center justify-between'>
+        <div className='flex py-10 sm:px-8 md:flex-row gap-10 flex-col items-center justify-between'>
 
             <div className='flex text-left flex-col px-5 w-[20rem] md:w-[12rem] '>
                         <Link to={'/'} className=' py-2 px-1 text-blue-600 border-l-blue-600 border-l-2 bg-blue-600/10 text-lg md:text-sm font-semibold'>
